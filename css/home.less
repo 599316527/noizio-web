@@ -1,6 +1,9 @@
 
+@border-color: #f0f0f0;
+@container-width: 260px;
+
 .container {
-    width: 260px;
+    width: @container-width;
     border-radius: 8px;
 }
 
@@ -37,13 +40,13 @@
 }
 
 .panel {
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
+    border-left: 1px solid @border-color;
+    border-right: 1px solid @border-color;
 }
 
 .sound {
     padding: 22px 24px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid @border-color;
     @height: 40px;
     .icon {
         width: 36px;
@@ -89,6 +92,41 @@
             background: black;
             margin-top: 0;
         }
+    }
+}
+
+.footer {
+    &:extend(.header);
+    text-align: right;
+    background-color: #f6f6f6;
+    border-top: 1px solid @border-color;
+    .button {
+        &:extend(.header .button);
+        text-indent: 9999em;
+    }
+    .button-timer {
+        background-image: url(../res/icon/timer.png);
+    }
+}
+
+.fixed-banner {
+    .container {
+        height: 100%;
+        position: relative;
+    }
+    .header,
+    .footer {
+        position: fixed;
+        width: @container-width;
+    }
+    .header {
+        top: 0;
+    }
+    .footer {
+        bottom: 0;
+    }
+    .panel {
+        padding: 50px 0;
     }
 }
 

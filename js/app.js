@@ -27,3 +27,17 @@ NOIZIO.homeView = new Vue({
         }
     }
 });
+
+
+
+var onResize = function () {
+    var doc = document.documentElement;
+    doc.className = doc.scrollHeight > doc.clientHeight ? 'fixed-banner' : '';
+};
+window.addEventListener('resize', onResize, false);
+onResize();
+
+
+
+
+

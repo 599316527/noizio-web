@@ -2,12 +2,14 @@
   width: 260px;
   border-radius: 8px;
 }
-.header {
+.header,
+.footer {
   padding: 15px 0;
   background-color: black;
   text-align: center;
 }
-.header .button {
+.header .button,
+.footer .button {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -33,12 +35,12 @@
   background-image: url(../res/icon/settings.png);
 }
 .panel {
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
 }
 .sound {
   padding: 22px 24px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f0f0f0;
 }
 .sound .icon {
   width: 36px;
@@ -80,4 +82,33 @@
   border-radius: 0;
   background: black;
   margin-top: 0;
+}
+.footer {
+  text-align: right;
+  background-color: #f6f6f6;
+  border-top: 1px solid #f0f0f0;
+}
+.footer .button {
+  text-indent: 9999em;
+}
+.footer .button-timer {
+  background-image: url(../res/icon/timer.png);
+}
+.fixed-banner .container {
+  height: 100%;
+  position: relative;
+}
+.fixed-banner .header,
+.fixed-banner .footer {
+  position: fixed;
+  width: 260px;
+}
+.fixed-banner .header {
+  top: 0;
+}
+.fixed-banner .footer {
+  bottom: 0;
+}
+.fixed-banner .panel {
+  padding: 50px 0;
 }
