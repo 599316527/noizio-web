@@ -112,3 +112,35 @@
 .fixed-banner .panel {
   padding: 50px 0;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .info {
+  padding: 1em 1.5em;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  box-shadow: 1px 1px 9px #ccc;
+}
+.overlay .info .description {
+  font-size: 1.4em;
+  margin: .6em 0 1.5em;
+}
+.overlay .info .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.overlay .info .buttons a {
+  color: #1ab1ea;
+  text-decoration: none;
+  padding: 5px 10px;
+  background: rgba(246, 246, 246, 0.7);
+  border-radius: 2px;
+}

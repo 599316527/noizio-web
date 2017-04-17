@@ -14,16 +14,26 @@
 
 <div id="home" class="container">
     <div class="header">
-        <a class="button button-about" href="###">about</a>
+        <a class="button button-about" href="###" v-on="click: openOverlay">about</a>
         <a class="button {{isPlaying ? 'button-pause' : 'button-play'}}"
             href="###" v-on="click: playToggle">play</a>
-        <a class="button button-setting" href="###">setting</a>
+        <a class="button button-setting" href="###" v-on="click: openOverlay">setting</a>
     </div>
     <div class="panel">
         <div v-component="sound" v-repeat="sounds"></div>
     </div>
     <div class="footer">
-        <a class="button button-timer" href="###">timer</a>
+        <a class="button button-timer" href="###" v-on="click: openOverlay">timer</a>
+    </div>
+
+    <div class="overlay" style="display: none" v-el="overlay">
+        <div class="info">
+            <p class="description">Get Noizio.app for more tracks & features</p>
+            <p class="buttons">
+                <a href="http://noiz.io/">More</a>
+                <a href="###" v-on="click: closeOverlay">Close</a>
+            </p>
+        </div>
     </div>
 </div>
 

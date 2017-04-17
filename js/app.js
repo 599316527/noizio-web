@@ -24,6 +24,15 @@ NOIZIO.homeView = new Vue({
             this.$children.forEach(function (sound) {
                 sound.pause();
             });
+        },
+
+        openOverlay: function (evt) {
+            evt.preventDefault();
+            this.$$.overlay.style.display = ''
+        },
+        closeOverlay: function (evt) {
+            evt.preventDefault();
+            this.$$.overlay.style.display = 'none'
         }
     }
 });
