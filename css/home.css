@@ -1,5 +1,6 @@
 .container {
-  width: 260px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 8px;
 }
 .header,
@@ -101,7 +102,8 @@
 .fixed-banner .header,
 .fixed-banner .footer {
   position: fixed;
-  width: 260px;
+  width: 100%;
+  max-width: 400px;
 }
 .fixed-banner .header {
   top: 0;
@@ -118,11 +120,14 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .overlay .info {
+  margin: 0 1em;
   padding: 1em 1.5em;
   background: white;
   border: 1px solid #f0f0f0;
